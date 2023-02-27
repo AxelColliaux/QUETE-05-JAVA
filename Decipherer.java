@@ -8,9 +8,7 @@ class Decipherer {
     public static String decipher(String string){
         int keyNumber = (string.length())/2;
         String substring = string.substring(5, 5 + keyNumber);
-        substring = substring.replace('@', ' ');
-        substring = substring.replace('#', ' ');
-        substring = substring.replace('?', ' ');
+        substring = substring.replace("@#?", " ");
         return new StringBuilder(substring).reverse().toString();
     }
 }
